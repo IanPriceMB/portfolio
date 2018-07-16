@@ -22,10 +22,11 @@ var allProjects =
 
 $(document).ready(function(){
     for (let i = 0; i < allProjects.length; i++){
-        $('#projects-div').prepend(`<div class='media col-12' id='projectDiv${i+1}'>`);
+        $('#projects-div').prepend(`<div class='row' id='projectRow${i+1}'>`);
+        $(`#projectRow${i+1}`).prepend(`<div class='media' id='projectDiv${i+1}'>`);
         $(`#projectDiv${i+1}`).append(`<a href='https://ianpricemb.github.io/${allProjects[i].source}' target='_blank' class='align-self-start mr-3' id='projectGitAnchor${i+1}'>`);
         $(`#projectGitAnchor${i+1}`).append(`<img src='pictures/${allProjects[i].image}' alt='${allProjects[i].title}'>`);
-        $(`#projectDiv${i+1}`).append(`<div class='media-body' id='mediaBody${i+1}'>`);
+        $(`#projectRow${i+1}`).append(`<div class='media-body' id='mediaBody${i+1}'>`);
         $(`#mediaBody${i+1}`).append(`<h3 class='mt-0' id='projectTitle${i+1}'>`);
         $(`#projectTitle${i+1}`).text(allProjects[i].title);
         $(`#mediaBody${i+1}`).append(allProjects[i].skills.join(', '));
@@ -35,10 +36,11 @@ $(document).ready(function(){
     }
 
     const projectOneSkills = ['CSS', 'Media Querys'];
-    $('#projects-div').prepend(`<div class='media col-12' id='projectDivProject1'>`);
-    $(`#projectDivProject1`).append(`<a href='https://kesimm.github.io/projectone' target='_blank' class='align-self-start mr-3' id='projectGitAnchorProject1'>`);
+    $('#projects-div').prepend(`<div class='row' id='projectRowProject1'>`);
+    $('projectRowProject1').prepend(`<div class='media' id='projectDivProject1'>`);
+    $(`projectDivProject1`).append(`<a href='https://kesimm.github.io/projectone' target='_blank' class='align-self-start mr-3' id='projectGitAnchorProject1'>`);
     $(`#projectGitAnchorProject1`).append(`<img src='pictures/JoBrew.png' alt='Joe Brew'>`);
-    $(`#projectDivProject1`).append(`<div class='media-body' id='mediaBodyProject1'>`);
+    $(`projectRowProject1`).append(`<div class='media-body' id='mediaBodyProject1'>`);
     $(`#mediaBodyProject1`).append(`<h3 class='mt-0' id='projectTitleProject1'>`);
     $(`#projectTitleProject1`).text('JoBrew');
     $(`#mediaBodyProject1`).append(projectOneSkills.join(', '));
@@ -47,10 +49,11 @@ $(document).ready(function(){
     $(`#projectWebAnchorProject1`).text('Gitbug repo here');
 
     const projectTwoSkills = ['Full-Stack by myself', 'HTML5', 'CSS', 'JavaScript', 'Jquery', 'Canvas', 'Drag and Drop', 'Adobe Photoshop', 'Passport JS (Original Build)', 'Sequelize (Original Build)', 'MySQL (Original Build)'];
-    $('#projects-div').prepend(`<div class='media col-12' id='projectDivProject2'>`);
-    $(`#projectDivProject2`).append(`<a href='https://ianpricemb.github.io/overCoach/' target='_blank' class='align-self-start mr-3' id='projectGitAnchorProject2'>`);
+    $('#projects-div').prepend(`<div class='row' id='projectRowProject2'>`);
+    $('projectRowProject2').prepend(`<div class='media' id='projectDivProject2'>`);
+    $(`projectDivProject2`).append(`<a href='https://ianpricemb.github.io/overCoach/' target='_blank' class='align-self-start mr-3' id='projectGitAnchorProject2'>`);
     $(`#projectGitAnchorProject2`).append(`<img src='pictures/OverCoach.png' alt='Joe Brew'>`);
-    $(`#projectDivProject2`).append(`<div class='media-body' id='mediaBodyProject2'>`);
+    $(`projectRowProject2`).append(`<div class='media-body' id='mediaBodyProject2'>`);
     $(`#mediaBodyProject2`).append(`<h3 class='mt-0' id='projectTitleProject2'>`);
     $(`#projectTitleProject2`).text('Over Coach');
     $(`#mediaBodyProject2`).append(projectTwoSkills.join(', '));
