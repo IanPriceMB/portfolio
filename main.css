@@ -1,0 +1,22 @@
+
+body, html{
+    background: black;
+    height: 100%;
+    font-family: sans-serif;
+    color: azure;
+}
+/* header of the page */
+.header{
+    width: 100%;
+    border-bottom: solid azure 3px;
+    margin-bottom: 3%;
+}
+.header h1{
+    font-size: 3em;
+    margin-left: 5%;
+}
+#aboutImg{
+    max-width: 100%; 
+    height: auto;
+    margin-left: 12px;
+}
