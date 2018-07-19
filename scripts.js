@@ -23,7 +23,7 @@ synopsis = {
    // FFX
    7: `I am extremely proud of this project. It was the first time I really felt like I got to do everything I wanted to do. I used timers, made my own (essentially) JSON object for the questions, added music - the works. If you are looking at this project and are also a Final Fantasy nut, then I challenge you to beat this game. There are 5 base levels and if you can clear all of them it summons a boss level (with ridiculous questions included).`,
    //giphy
-   8: `This project is a series of simple front-end API call to giphy. You can click on the images to change their display states.`,
+   8: `This project is a series of simple front-end API calls to giphy. You can click on the images to change their display states.`,
    //Project 1
    p1: `This was my first group coding project. I was tasked with the styling of the website. In order to challenge myself I did the full styling by hand (without Bootstrap or Materialize) and included 11 different media query breakpoints. I didn't learn about --webkit-- or CSS systems like grid and flexbox until much after this project was completed.`,
    //Project 2
