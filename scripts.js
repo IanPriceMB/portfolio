@@ -9,25 +9,25 @@ synopsis = {
    // wireFrame
    0: `My first ever project, my wireframe was based on using floats and basic CSS3 styling.`,
    // basicPortfolio
-   1: `As my second project this was an extension of the idea behind the Basic Wireframe project. I used HTML5 and CSS3 skills to create a simple portfolio website design.`,
+   1: `As my second project this was an extension of the idea behind the Basic Wireframe project. I used HTML5 and CSS3 skills to create a portfolio website design.`,
    // bootsPortfolio
-   2: `This project was all about learning the Bootstrap library. I recreated the same basic portfolio web design from my second project using Bootstrap.`,
+   2: `This project was all about learning the Bootstrap library. As such, I recreated the same portfolio web design from my second project using Bootstrap.`,
    // hangman
-   3: `As my fourth project this simple Hangman game served as my first introduction to JavaScript I also used some jQuery in the code just to practice recognizing the differences and similarities in their syntax.`,
+   3: `As my fourth project this Hangman game served as my first introduction to JavaScript I also used some jQuery in the code just to practice recognizing the differences and similarities in their syntax.`,
    // monsterHunter
-   4: `The challenge for this project was to learn more about jQuery and click events, as well as implementing basic reusable functions for multiple parts of the same web page. From that challenge this simple game was born. I hope you like my 'monster' choices I was having some fun with them!`,
+   4: `The challenge for this project was to learn more about jQuery and click events, as well as how to implement basic reusable functions for multiple parts of the same web page. From that challenge this game was born. I hope you like my 'monster' choices I was having some fun with them!`,
    // liri
-   5: `This was my first application in Node.JS. If you don't want to download the whole github repo, there are screen shots in the README file on my github page. All this application does is make a few back end API calls to twitter, spotify, the OMDB API, and to a local file using ‘fs.readfile’, then display selected information in the terminal.`,
+   5: `This was my first application in Node.JS. If you don't want to download the whole github repo, there are screen shots in the README file on my github page. This application makes a few on-demand back end API calls to twitter, spotify, the OMDB API, and to a local file using ‘fs.readfile’, then displays selected information in the terminal.`,
    // shimBros
-   6: `This project was a difficult one for me as I tried to go extremely above and beyond what I was asked to do. Instead of making a simple two player game lobby in Firebase, I wanted to be able to create infinite instances of game lobbies so that I could have as many players playing at the same time as there were players who were available to play. This proved quite a bit more difficult, but I eventually got the infinite multiplayer functionality working just as long as two players (globally) don't share the same name. The game portion of this project is still a work in progress, as is the defense code against name sharing.`,
+   6: `This project I went way above and beyond what I was asked to do. Instead of making a simple two player game lobby in Firebase, I wanted to be able to create infinite instances of game lobbies so that I could have as many two player games going at the same time as possible. I eventually got the infinite multiplayer functionality working just as long as two players (globally) don't share the same name. The game portion of this project is still a work in progress, as is the defensive code against name sharing.`,
    // FFX
    7: `I am extremely proud of this project. It was the first time I really felt like I got to do everything I wanted to do. I used timers, made my own (essentially) JSON object for the questions, added music - the works. If you are looking at this project and are also a Final Fantasy nut, then I challenge you to beat this game. There are 5 base levels and if you can clear all of them it summons a boss level (with ridiculous questions included).`,
    //giphy
-   8: `This project is a series of simple front-end API calls to giphy. You can click on the images to change their display states.`,
+   8: `This project is a series of  front-end API calls to the giphy API. You can click on the images to change their display states.`,
    //Project 1
-   p1: `This was my first group coding project. I was tasked with the styling of the website. In order to challenge myself I did the full styling by hand (without Bootstrap or Materialize) and included 11 different media query breakpoints. I didn't learn about --webkit-- or CSS systems like grid and flexbox until much after this project was completed.`,
+   p1: `This was my first group coding project. I was tasked with the styling of the website. In order to challenge myself I did the full styling by hand (without Bootstrap or Materialize) and included 11 different media query breakpoints.`,
    //Project 2
-   p2: `This is one of the projects I am most proud of. I thought myself canvas as well as how to create and implement custom event listeners with JavaScript. The premise was to create a coaching tool for the video game Overwatch where you could design strategies for all the different maps. The original build of this website included a fully functioning login system using passport js and bcrypt for password hashing, and all of the users were stored in a MySQL database with sequelize, but I determined that it was unnecessary in the end and removed it.`,
+   p2: `This is one of the projects I am most proud of. I taught myself canvas, as well as how to create and implement custom event listeners with JavaScript. The premise was to create a coaching tool for the video game Overwatch where you could design strategies for all the different maps. The original build of this website included a fully functioning login system using passport js and bcrypt for password hashing, and all of the users were stored in a MySQL database with sequelize, but this was unessesary for the final build so it was removed.`,
 }
 var wireFrame = new Project ('Basic Wireframe', 'wireframe.png', 'wireframe',  ['HTML5', 'CSS']);
 var basicPortfolio = new Project ('Basic Portfolio', 'basicPortfolio.png', 'basicPortfolio', ['HTML5', 'CSS']);
