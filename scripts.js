@@ -24,25 +24,28 @@ synopsis = {
    7: `I am extremely proud of this project. It was the first time I really felt like I got to do everything I wanted to do. I used timers, made my own (essentially) JSON object for the questions, added music - the works. If you are looking at this project and are also a Final Fantasy nut, then I challenge you to beat this game. There are 5 base levels and if you can clear all of them it summons a boss level (with ridiculous questions included).`,
    //giphy
    8: `This project is a series of  front-end API calls to the giphy API. You can click on the images to change their display states.`,
+   //friendFinder
+   9: `This project is an application that takes in user data and runs a some back end code to determine who the user's best friend is, and then returns the result to the front end. Full project useable only via cloning the repo.`,
    //Project 1
    p1: `This was my first group coding project. I was tasked with the styling of the website. In order to challenge myself I did the full styling by hand (without Bootstrap or Materialize) and included 11 different media query breakpoints.`,
    //Project 2
    p2: `This is one of the projects I am most proud of. I taught myself canvas, as well as how to create and implement custom event listeners with JavaScript. The premise was to create a coaching tool for the video game Overwatch where you could design strategies for all the different maps. The original build of this website included a fully functioning login system using passport js and bcrypt for password hashing, and all of the users were stored in a MySQL database with sequelize, but this was unessesary for the final build so it was removed.`,
 }
-var wireFrame = new Project ('Basic Wireframe', 'wireframe.png', 'wireframe',  ['HTML5', 'CSS']);
-var basicPortfolio = new Project ('Basic Portfolio', 'basicPortfolio.png', 'basicPortfolio', ['HTML5', 'CSS']);
-var bootsPortfolio = new Project ('Basic Portfolio with Bootstrap', 'bootsPortfolio.png', 'bootstrapPortfolio', ['HTML5', 'Bootstrap']);
-var hangman = new Project ('Hangman', 'hangman.png', 'hangman', ['HTML5', 'CSS', 'JavaScript']);
-var monsterHunter = new Project ('Monster Hunter', 'monsterHunter.png', 'monsterHunter', ['HTML5', 'CSS', 'JavaScript', 'jQuery']);
-var liri = new Project ('Liri Node App', 'liriNodeApp.png', 'liriNodeApp', ['Node.JS', 'Terminal', 'JavaScript', 'API & AJAX calls']);
-var shimBros = new Project ('Shimada Bros. RPS (Ongoing)', 'shimBros.png', 'shimBrosRPS', ['HTML5', 'CSS', 'JavaScript', 'Jquery', 'Adobe Photoshop', 'Adobe After Effects', 'Firebase', 'API & AJAX calls']);
-var FFX = new Project ('Final Fantasty X Trivia', 'FFX.png', 'FFXTrivia', ['HTML5', 'CSS', 'JavaScript', 'Jquery']);
-var giphy = new Project (`Giphy API Fun`, `giphy.png`, `giphyFun`, [`Front-end Ajax calls`, `Giphy API`, `CSS`, `Bootstrap`, `JavaScript`, `jQuery`, ])
+const wireFrame = new Project ('Wireframe', 'wireframe.png', 'wireframe',  ['HTML5', 'CSS']);
+const basicPortfolio = new Project ('Portfolio', 'basicPortfolio.png', 'basicPortfolio', ['HTML5', 'CSS']);
+const bootsPortfolio = new Project ('Portfolio with Bootstrap', 'bootsPortfolio.png', 'bootstrapPortfolio', ['HTML5', 'Bootstrap']);
+const hangman = new Project ('Hangman', 'hangman.png', 'hangman', ['HTML5', 'CSS', 'JavaScript', 'Bootstrap']);
+const monsterHunter = new Project ('Monster Hunter', 'monsterHunter.png', 'monsterHunter', ['HTML5', 'CSS', 'JavaScript', 'jQuery']);
+const liri = new Project ('Liri Node App', 'liriNodeApp.png', 'liriNodeApp', ['Node.JS', 'Terminal', 'JavaScript', 'API & AJAX calls']);
+const shimBros = new Project ('Shimada Bros. RPS (Ongoing)', 'shimBros.png', 'shimBrosRPS', ['HTML5', 'CSS', 'JavaScript', 'Jquery', 'Adobe Photoshop', 'Adobe After Effects', 'Firebase', 'API & AJAX calls']);
+const FFX = new Project ('Final Fantasty X Trivia', 'FFX.png', 'FFXTrivia', ['HTML5', 'CSS', 'JavaScript', 'Jquery']);
+const giphy = new Project (`Giphy API Fun`, `giphy.png`, `giphyFun`, [`Front-end Ajax calls`, `Giphy API`, `CSS`, `Bootstrap`, `JavaScript`, `jQuery`])
+const friendFinder =  new Project (`Friend Finder`, `friendFinder.png`, 'friendFinder', [`Bootstrap`, `JavaScript`, `jQuery`, `Express Server`, `Node JS`, `HTML and Server Routing`, `Front-end Ajax calls`, `Body parser`])
 
-var allProjects = 
+const allProjects = 
     [
         wireFrame, basicPortfolio, bootsPortfolio, hangman, monsterHunter,
-        liri, shimBros, FFX, giphy
+        liri, shimBros, FFX, giphy, friendFinder
     ];
 
 $(document).ready(function(){
@@ -59,7 +62,7 @@ $(document).ready(function(){
         $(`#mediaBody${i+1}`).append(synopsis[i]);
         $(`#mediaBody${i+1}`).append('<br><br>');
         $(`#mediaBody${i+1}`).append(`<a href='https://github.com/IanPriceMB/${allProjects[i].source}' target='_blank' class='webAnchor' id='projectWebAnchor${i+1}'>`);
-        $(`#projectWebAnchor${i+1}`).text('Gitbug repo here');
+        $(`#projectWebAnchor${i+1}`).text('Github repo here');
     }
 
     const projectOneSkills = ['CSS', 'Media Querys'];
@@ -71,7 +74,7 @@ $(document).ready(function(){
     $(`#mediaBodyProject1`).append(`<h3 class='mt-0' id='projectTitleProject1'>`);
     $(`#projectTitleProject1`).text('JoBrew');
     $(`#mediaBodyProject1`).append(projectOneSkills.join(', ')+"<br><br>"+synopsis.p1+"<br><br><a href='https://github.com/kesimm/projectone' target='_blank' class='webAnchor' id='projectWebAnchorProject1'>");
-    $(`#projectWebAnchorProject1`).text('Gitbug repo here');
+    $(`#projectWebAnchorProject1`).text('Github repo here');
 
     const projectTwoSkills = ['Full-Stack by myself', 'HTML5', 'CSS', 'JavaScript', 'Jquery', 'Canvas', 'Drag and Drop', 'Adobe Photoshop', 'Passport JS (Original Build)', 'Sequelize (Original Build)', 'MySQL (Original Build)'];
     $('#projects-div').prepend(`<div class='row' id='projectRowProject2'>`);
@@ -84,6 +87,6 @@ $(document).ready(function(){
     $(`#mediaBodyProject2`).append(projectTwoSkills.join(', '));
     $(`#mediaBodyProject2`).append('<br><br>'+synopsis.p2+`<br><br>`);
     $(`#mediaBodyProject2`).append(`<a href='https://github.com/IanPriceMB/overCoach' target='_blank' class='webAnchor' id='projectWebAnchorProject2'>`);
-    $(`#projectWebAnchorProject2`).text('Gitbug repo here');
+    $(`#projectWebAnchorProject2`).text('Github repo here');
 });
 
