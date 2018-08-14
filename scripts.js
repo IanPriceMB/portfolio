@@ -48,9 +48,15 @@ const allProjects =
         liri, shimBros, FFX, giphy, friendFinder
     ];
 
+const theGeeze = new Project ('The Geeze', 'theGeeze.png', 'thegeeze.herokuapp.com', ['HTML5', 'CSS3', 'Javascript', 'Photoshop', 'MongoDB', 'Express', 'Cheerio Scraper', 'Twitch Embed', 'YouTube Embed'])
+const proProjects = [
+        theGeeze
+    ];
+
 $(document).ready(function(){
+    //all projects
     for (let i = 0; i < allProjects.length; i++){
-        $('#projects-div').prepend(`<div class='row' id='projectRow${i+1}'>`);
+        $('#indProjects-div').prepend(`<div class='row' id='projectRow${i+1}'>`);
         $(`#projectRow${i+1}`).prepend(`<div class='media' id='projectDiv${i+1}'>`);
         $(`#projectDiv${i+1}`).append(`<a href='https://ianpricemb.github.io/${allProjects[i].source}' target='_blank' class='align-self-start mr-3' id='projectGitAnchor${i+1}'>`);
         $(`#projectGitAnchor${i+1}`).append(`<img src='pictures/${allProjects[i].image}' alt='${allProjects[i].title}'>`);
@@ -66,7 +72,7 @@ $(document).ready(function(){
     }
 
     const projectOneSkills = ['CSS', 'Media Querys'];
-    $('#projects-div').prepend(`<div class='row' id='projectRowProject1'>`);
+    $('#indProjects-div').prepend(`<div class='row' id='projectRowProject1'>`);
     $('#projectRowProject1').prepend(`<div class='media' id='projectDivProject1'>`);
     $(`#projectDivProject1`).append(`<a href='https://kesimm.github.io/projectone' target='_blank' class='align-self-start mr-3' id='projectGitAnchorProject1'>`);
     $(`#projectGitAnchorProject1`).append(`<img src='pictures/JoBrew.png' alt='Joe Brew'>`);
@@ -77,7 +83,7 @@ $(document).ready(function(){
     $(`#projectWebAnchorProject1`).text('Github repo here');
 
     const projectTwoSkills = ['Full-Stack by myself', 'HTML5', 'CSS', 'JavaScript', 'Jquery', 'Canvas', 'Drag and Drop', 'Adobe Photoshop', 'Passport JS (Original Build)', 'Sequelize (Original Build)', 'MySQL (Original Build)'];
-    $('#projects-div').prepend(`<div class='row' id='projectRowProject2'>`);
+    $('#indProjects-div').prepend(`<div class='row' id='projectRowProject2'>`);
     $('#projectRowProject2').prepend(`<div class='media' id='projectDivProject2'>`);
     $(`#projectDivProject2`).append(`<a href='https://ianpricemb.github.io/overCoach/' target='_blank' class='align-self-start mr-3' id='projectGitAnchorProject2'>`);
     $(`#projectGitAnchorProject2`).append(`<img src='pictures/OverCoach.png' alt='Joe Brew'>`);
@@ -88,5 +94,22 @@ $(document).ready(function(){
     $(`#mediaBodyProject2`).append('<br><br>'+synopsis.p2+`<br><br>`);
     $(`#mediaBodyProject2`).append(`<a href='https://github.com/IanPriceMB/overCoach' target='_blank' class='webAnchor' id='projectWebAnchorProject2'>`);
     $(`#projectWebAnchorProject2`).text('Github repo here');
+
+    //all professional projects
+    for (let i = 0; i < proProjects.length; i++){
+        $('#proProjects-div').prepend(`<div class='row' id='proProjectRow${i+1}'>`);
+        $(`#proProjectRow${i+1}`).prepend(`<div class='media' id='proProjectDiv${i+1}'>`);
+        $(`#proProjectDiv${i+1}`).append(`<a href='https://${proProjects[i].source}' target='_blank' class='align-self-start mr-3' id='proProjectGitAnchor${i+1}'>`);
+        $(`#proProjectGitAnchor${i+1}`).append(`<img src='pictures/${proProjects[i].image}' alt='${proProjects[i].title}'>`);
+        $(`#proProjectRow${i+1}`).append(`<div class='media-body' id='proMediaBody${i+1}'>`);
+        $(`#proMediaBody${i+1}`).append(`<h3 class='mt-0' id='proProjectTitle${i+1}'>`);
+        $(`#proProjectTitle${i+1}`).text(proProjects[i].title);
+        $(`#proMediaBody${i+1}`).append(proProjects[i].skills.join(', '));
+        $(`#proMediaBody${i+1}`).append('<br><br>');
+        $(`#proMediaBody${i+1}`).append(synopsis[i]);
+        $(`#proMediaBody${i+1}`).append('<br><br>');
+        $(`#proMediaBody${i+1}`).append(`<a href='https://github.com/IanPriceMB/theGeezeWebsite' target='_blank' class='webAnchor' id='proProjectWebAnchor${i+1}'>`);
+        $(`#proProjectWebAnchor${i+1}`).text('Github repo here');
+    }
 });
 
