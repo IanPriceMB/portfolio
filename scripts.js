@@ -52,6 +52,9 @@ const theGeeze = new Project ('The Geeze', 'theGeeze.png', 'thegeeze.herokuapp.c
 const proProjects = [
         theGeeze
     ];
+const proSynopsis = {
+    0: 'As my frist professional project, this website was a fun challenge. I got to work on skills that I was a unfamiliar with and I also got to practice working through bugs as well as working on my googeling skills. I really enjoyed trying my hand at some more advanced css topics and working through the bugs that pop up when you take a project from development to live.'
+}
 
 $(document).ready(function(){
     //all projects
@@ -106,7 +109,7 @@ $(document).ready(function(){
         $(`#proProjectTitle${i+1}`).text(proProjects[i].title);
         $(`#proMediaBody${i+1}`).append(proProjects[i].skills.join(', '));
         $(`#proMediaBody${i+1}`).append('<br><br>');
-        $(`#proMediaBody${i+1}`).append(synopsis[i]);
+        $(`#proMediaBody${i+1}`).append(proSynopsis[i]);
         $(`#proMediaBody${i+1}`).append('<br><br>');
         $(`#proMediaBody${i+1}`).append(`<a href='https://github.com/IanPriceMB/theGeezeWebsite' target='_blank' class='webAnchor' id='proProjectWebAnchor${i+1}'>`);
         $(`#proProjectWebAnchor${i+1}`).text('Github repo here');
