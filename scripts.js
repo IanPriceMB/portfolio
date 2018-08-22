@@ -49,14 +49,29 @@ const allProjects =
     ];
 
 const theGeeze = new Project ('The Geeze', 'theGeeze.png', 'thegeeze.herokuapp.com', ['HTML5', 'CSS3', 'Javascript', 'Photoshop', 'MongoDB', 'Express', 'Cheerio Scraper', 'Twitch Embed', 'YouTube Embed'])
-const proProjects = [
-        theGeeze
+const newFFXTrivia = new Project ('Final Fantasy X Trivia Remastered', 'newFFXTrivia.png', 'ianpricemb.github.io/newFFXTrivia', ['HTML5', 'CSS Flex-box', 'JavaScript', 'jQuery',  'YouTube iFrame API', 'Adobe Photoshop', 'Adobe Premiere Pro', 'HTML5 Video', 'HTML5 Audio'])
+    const proProjects = [
+        theGeeze, newFFXTrivia
     ];
 const proSynopsis = {
-    0: 'As my frist professional project, this website was a fun challenge. I got to work on skills that I was a unfamiliar with and I also got to practice working through bugs as well as working on my googeling skills. I really enjoyed trying my hand at some more advanced css topics and working through the bugs that pop up when you take a project from development to live.'
+    0: 'As my frist professional project, this website was a fun challenge. I got to work on skills that I was a unfamiliar with and I also got to practice working through bugs as well as working on my googeling skills. I really enjoyed trying my hand at some more advanced css topics and working through the bugs that pop up when you take a project from development to live.',
+    1: `This project was a passion project for me. I created the first version of this game during my web design course when I was just learning how to code and was unable to achieve my vision. However, now that I have had some professional experience under my belt I was able to revisit this project and create the remastered version. 
+    Since I can’t expect everybody who is checking out my profile to be a FFX nerd, what follows is an answer key so that you can experience the full brevity of what this game has to offer. Besaid: 3, 1, 2, 3, 2; Luca: 3, 4, 3, 4, 1; Djose: 3, 1, 4, 3, 1; Thunder Plains: 2, 2, 3, 3 ,1; Gagazet: 2, 3, 4, 2, 2; Sin: 2, 3, 4, 3, 3. P.S. Github is a great service but a terrible website host, so sometimes the cutscenes or pictures don’t load immediately. Please forgive them.`
 }
 
 $(document).ready(function(){
+    //class project 1
+    const projectOneSkills = ['CSS', 'Media Querys'];
+    $('#indProjects-div').prepend(`<div class='row' id='projectRowProject1'>`);
+    $('#projectRowProject1').prepend(`<div class='media' id='projectDivProject1'>`);
+    $(`#projectDivProject1`).append(`<a href='https://kesimm.github.io/projectone' target='_blank' class='align-self-start mr-3' id='projectGitAnchorProject1'>`);
+    $(`#projectGitAnchorProject1`).append(`<img src='pictures/JoBrew.png' alt='Joe Brew'>`);
+    $(`#projectRowProject1`).append(`<div class='media-body' id='mediaBodyProject1'>`);
+    $(`#mediaBodyProject1`).append(`<h3 class='mt-0' id='projectTitleProject1'>`);
+    $(`#projectTitleProject1`).text('JoBrew');
+    $(`#mediaBodyProject1`).append(projectOneSkills.join(', ')+"<br><br>"+synopsis.p1+"<br><br><a href='https://github.com/kesimm/projectone' target='_blank' class='webAnchor' id='projectWebAnchorProject1'>");
+    $(`#projectWebAnchorProject1`).text('Github repo here');
+
     //all projects
     for (let i = 0; i < allProjects.length; i++){
         $('#indProjects-div').prepend(`<div class='row' id='projectRow${i+1}'>`);
@@ -72,19 +87,9 @@ $(document).ready(function(){
         $(`#mediaBody${i+1}`).append('<br><br>');
         $(`#mediaBody${i+1}`).append(`<a href='https://github.com/IanPriceMB/${allProjects[i].source}' target='_blank' class='webAnchor' id='projectWebAnchor${i+1}'>`);
         $(`#projectWebAnchor${i+1}`).text('Github repo here');
-    }
+        }
 
-    const projectOneSkills = ['CSS', 'Media Querys'];
-    $('#indProjects-div').prepend(`<div class='row' id='projectRowProject1'>`);
-    $('#projectRowProject1').prepend(`<div class='media' id='projectDivProject1'>`);
-    $(`#projectDivProject1`).append(`<a href='https://kesimm.github.io/projectone' target='_blank' class='align-self-start mr-3' id='projectGitAnchorProject1'>`);
-    $(`#projectGitAnchorProject1`).append(`<img src='pictures/JoBrew.png' alt='Joe Brew'>`);
-    $(`#projectRowProject1`).append(`<div class='media-body' id='mediaBodyProject1'>`);
-    $(`#mediaBodyProject1`).append(`<h3 class='mt-0' id='projectTitleProject1'>`);
-    $(`#projectTitleProject1`).text('JoBrew');
-    $(`#mediaBodyProject1`).append(projectOneSkills.join(', ')+"<br><br>"+synopsis.p1+"<br><br><a href='https://github.com/kesimm/projectone' target='_blank' class='webAnchor' id='projectWebAnchorProject1'>");
-    $(`#projectWebAnchorProject1`).text('Github repo here');
-
+    //class project two
     const projectTwoSkills = ['Full-Stack by myself', 'HTML5', 'CSS', 'JavaScript', 'Jquery', 'Canvas', 'Drag and Drop', 'Adobe Photoshop', 'Passport JS (Original Build)', 'Sequelize (Original Build)', 'MySQL (Original Build)'];
     $('#indProjects-div').prepend(`<div class='row' id='projectRowProject2'>`);
     $('#projectRowProject2').prepend(`<div class='media' id='projectDivProject2'>`);
@@ -105,14 +110,8 @@ $(document).ready(function(){
         $(`#proProjectDiv${i+1}`).append(`<a href='https://${proProjects[i].source}' target='_blank' class='align-self-start mr-3' id='proProjectGitAnchor${i+1}'>`);
         $(`#proProjectGitAnchor${i+1}`).append(`<img src='pictures/${proProjects[i].image}' alt='${proProjects[i].title}'>`);
         $(`#proProjectRow${i+1}`).append(`<div class='media-body' id='proMediaBody${i+1}'>`);
-        $(`#proMediaBody${i+1}`).append(`<h3 class='mt-0' id='proProjectTitle${i+1}'>`);
+        $(`#proMediaBody${i+1}`).append(`<h3 class='mt-0' id='proProjectTitle${i+1}'>`).append(proProjects[i].skills.join(', ')).append('<br><br>').append(proSynopsis[i]).append('<br><br>');
         $(`#proProjectTitle${i+1}`).text(proProjects[i].title);
-        $(`#proMediaBody${i+1}`).append(proProjects[i].skills.join(', '));
-        $(`#proMediaBody${i+1}`).append('<br><br>');
-        $(`#proMediaBody${i+1}`).append(proSynopsis[i]);
-        $(`#proMediaBody${i+1}`).append('<br><br>');
-        $(`#proMediaBody${i+1}`).append(`<a href='https://github.com/IanPriceMB/theGeezeWebsite' target='_blank' class='webAnchor' id='proProjectWebAnchor${i+1}'>`);
-        $(`#proProjectWebAnchor${i+1}`).text('Github repo here');
     }
 });
 
