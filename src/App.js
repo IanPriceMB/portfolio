@@ -10,7 +10,7 @@ class App extends Component {
     links: {
       passion: 'https://ianpricemb.github.io/newFFXTrivia',
       excellence: 'https://thegeeze.herokuapp.com/',
-      experience: 'https://ianpricemb.github.io/overCoach'
+      experience: 'https://ianpricemb.github.io/Heroes-Coach/'
     },
     passion: false,
     excellence: false,
@@ -58,7 +58,7 @@ class App extends Component {
             <div style={{width: '100%', height: '100%', backgroundColor: 'red', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: 'absolute', zIndex: 3}}>
             <div style={{alignSelf: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
               <h1 style={{textAlign: 'center'}}>Passion</h1>
-              <h3 style={{textAlign: 'center'}}>Final Fantasy X Trivai: Remastered</h3>
+              <h3 style={{textAlign: 'center'}}>Final Fantasy X Triva: Remastered</h3>
               <h5 style={{textAlign: 'center'}}>JavaScript, jQuery, HTML5 Video & Audio, CSS Flex-Box, Adobe Photoshop, Adobe Premiere Pro, YouTube iFrame API</h5>
               <button onClick={(e) => this.linkClick('passion', e)} style={{padding: 10, borderRadius: 20, backgroundColor: 'red', border: 'white solid', color: 'white', fontSize: '1.5em', alignSelf: 'center'}}>view</button>
             </div>
@@ -113,7 +113,7 @@ class App extends Component {
             <div style={{width: '100%', height: '100%', backgroundColor: 'navy', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: 'absolute', zIndex: 3}}>
             <div style={{alignSelf: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
               <h1 style={{textAlign: 'center'}}>Experience</h1>
-              <h3 style={{textAlign: 'center'}}>Over Coach</h3>
+              <h3 style={{textAlign: 'center'}}>MaddBuddha's Coaching Tools</h3>
               <h5 style={{textAlign: 'center'}}>JavaScript, jQuery, MySQL, Sequelize, Express, Passport JS, Bycrypt, Canvas, Adobe Photoshop</h5>
               <button onClick={(e) => this.linkClick('experience', e)} style={{padding: 10, borderRadius: 20, backgroundColor: 'navy', border: 'white solid', color: 'white', fontSize: '1.5em', alignSelf: 'center'}}>view</button>
             </div>
