@@ -2,8 +2,23 @@ import React, { Component } from 'react';
 import './App.css';
 import Canvas from './components/Canvas';
 import Div from './components/Div';
+import View from './components/View';
 import picture from './static/pictures/mainPicture.png';
 import scrollIntoView from 'scroll-into-view';
+
+let props = {
+  sectionID: 'passion', 
+  fontColor: {color: 'white'},
+  emotion: 'passion', 
+  title: 'Passion', 
+  projectTitle: 'Final Fantasy X Trivia: Remastered',
+  projectSkills: 'JavaScript, jQuery, HTML5 Video & Audio, CSS Flex-Box, Adobe Photoshop, Adobe Premiere Pro, YouTube iFrame API',
+  onClickButton: `${(e) => this.linkClick('passion', e)}`, 
+  autoScrollHome: `${(e) => this.autoScroll('home', e)}`, 
+  autoScrollExcellence: `${(e) => this.autoScroll('excellence')}`,
+  lowerLeft: 'Home', 
+  lowerRight: 'Excellence'
+}
 
 class App extends Component {
   state = {
@@ -34,6 +49,7 @@ class App extends Component {
     this.setState({[location]: false});
     document.getElementById(location).getElementsByTagName('iframe')[0].removeAttribute('src')
   }
+
   render() {
     return (
       <div className="App">
@@ -47,13 +63,15 @@ class App extends Component {
           </nav>
           <Canvas style={{height: '100vh', zIndex: 1}}/>
         </Div>
+        <View {...props}/>
 
-        {/* this section is all about the website that I feel encompases the feeling of 'passion */}
+
+        {/* this section is all about the website that I feel encompases the feeling of 'passion
         <Div id='passion' style={{color: 'white'}}>
-          {/* this is a link to the website that i feel represents 'passion' */}
+          {/* this is a link to the website that i feel represents 'passion' 
           <iframe id='iframe' title='passion' frameBorder="0" style={{width: '90%', height: '90vh', overflow: 'auto', position: 'absolute', zIndex:1,  margin: 'auto', top: '0', left: '0', bottom: '0', right: '0'}}/>
 
-          {/* this section is the cover over the website giving a bit of a background to what is underneath */}
+          {/* this section is the cover over the website giving a bit of a background to what is underneath 
           {this.state.passion===false?(<div>
             <div style={{width: '100%', height: '100%', backgroundColor: 'red', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: 'absolute', zIndex: 3}}>
             <div style={{alignSelf: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
@@ -66,14 +84,14 @@ class App extends Component {
             <span onClick={(e) => this.autoScroll('excellence')} style={{padding: '10px 5px', position: 'absolute', right: '0', bottom: '0', zIndex: 2}}>Excellence</span>
           </div>
           </div>):(<div>
-          {/* these are a set of link and extra info to remind the viewer that they are currently on my website and not on one of th other websites they are looking at */}
+          {/* these are a set of link and extra info to remind the viewer that they are currently on my website and not on one of th other websites they are looking at 
           <span style={{position: 'absolute', zIndex:0,  margin: 'auto', top: '0', left: '0', bottom: '0', right: '0', height: '3em', fontSize: '3em', width: '30vw', textAlign: 'center'}}> Loading </span>
           <span style={{padding: '10px 5px', position: 'absolute', top: '0', left: '0', zIndex: 2}}><a href='https://github.com/IanPriceMB/newFFXTrivia' target='_blank'>Final Fantasy X Trivia: Remastered</a></span>
           <span onClick={(e) => this.closeSite('passion', e)} style={{padding: '10px 5px', position: 'absolute', top: '0', right: '0', zIndex: 2}}>close this site</span>
           <span onClick={(e) => this.autoScroll('home')} style={{padding: '10px 5px', position: 'absolute', left: '0', bottom: '0', zIndex: 2}}>Home</span>
           <span onClick={(e) => this.autoScroll('excellence')} style={{padding: '10px 5px', position: 'absolute', right: '0', bottom: '0', zIndex: 2}}>Excellence</span>
           </div>)}
-        </Div>
+        </Div> */}
 
         {/* this section is all about the website that I feel encompases the feeling of 'excellence */}
         <Div id='excellence' style={{color: 'black'}}>
@@ -125,7 +143,7 @@ class App extends Component {
           </div>):(<div>
           {/* these are a set of link and extra info to remind the viewer that they are currently on my website and not on one of th other websites they are looking at */}
           <span style={{position: 'absolute', zIndex:0,  margin: 'auto', top: '0', left: '0', bottom: '0', right: '0', height: '3em', fontSize: '3em', width: '30vw', textAlign: 'center'}}> Loading </span>
-          <span style={{padding: '10px 5px', position:'absolute', top: '0', left: '0', zIndex: 2}}><a href='https://github.com/IanPriceMB/overCoach' target='_blank'>Over Coach</a></span>
+          <span style={{padding: '10px 5px', position:'absolute', top: '0', left: '0', zIndex: 2}}><a href='https://github.com/IanPriceMB/Heroes-Coach' target='_blank'>MaddBuddha's Coaching Tools</a></span>
           <span onClick={(e) => this.closeSite('experience', e)} style={{padding: '10px 5px', position: 'absolute', top: '0', right: '0', zIndex: 2}}>close this site</span>
           <span onClick={(e) => this.autoScroll('home')} style={{padding: '10px 5px', position: 'absolute', left: '0', bottom: '0', zIndex: 2}}>Home</span>
           <span onClick={(e) => this.autoScroll('home')} style={{padding: '10px 5px', position: 'absolute', right: '0', bottom: '0', zIndex: 2}}>Top of Page</span>
