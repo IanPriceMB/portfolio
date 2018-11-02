@@ -5,8 +5,8 @@
   "homepage": "https://ianpricemb.github.io/profile",
   "dependencies": {
     "gh-pages": "^1.2.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-scripts": "1.1.4",
     "scroll-into-view": "^1.9.3"
   },
