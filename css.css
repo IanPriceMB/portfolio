@@ -1,0 +1,200 @@
+/* Setting some global styling */
+body, html{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+/* giving body a background color to mute  the parallax pictures */
+body{
+  background-color: black;
+}
+/* Removing the scroll bar */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px; 
+}
+/* Setting up for a parallax effect later */
+.lower-container{
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+.upper-container{
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+/* Styling the header */
+.upper-container > h1{
+  font-size: 3em;
+  color: white;
+
+  width: 100%;
+  margin: 0;
+  padding: 2% 0;
+  padding-left: 12.5%;
+  background-color: black;
+}
+/* Styling the layout for all sections */
+.section-container{
+  position: relative;
+  height: 35vh;
+  margin-bottom: 8%;
+}
+/* alternating the sides the logos are on for the sections */
+.background-image{
+  position: absolute;
+  z-index: 2;
+  width: 5%;
+  height: auto;
+
+  top: 0;
+  bottom: 0;
+  left: 4%;
+  margin: auto 0;
+}
+/* Styling the information portion */
+.main-section{
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  padding-bottom: 3%;
+  padding-top: 1.5%;
+}
+.main-section > * {
+  width: 75%;
+  margin: 10px auto;
+}
+.main-section > h2{
+ font-size: 2.5em;
+ margin-bottom: 10px;
+}
+.main-section > p{
+  font-size: 1.2em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.links{
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.links > a > * {
+  margin: 5px;
+  color: rgb(65, 191, 207);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: underline; 
+}
+
+
+/* Individual styling for each section */
+/* Nexus gaming series section */
+.NGS{
+  background-image: linear-gradient(to right, rgb(196, 87, 41), #482262);
+  color: white;
+  filter: drop-shadow(1px 50px 1px #0c0c0c);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+}
+.NGS > h2{
+  filter: drop-shadow(0 0 0.75rem #1C032D);
+}
+
+/* Java game section */
+.Java{
+  background-image: linear-gradient(to left, rgb(65, 138, 151), black);
+  color: white;
+  filter: drop-shadow(1px 50px 1px #0c0c0c);
+  -webkit-clip-path: polygon(0 0, 100% 11%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 11%, 100% 90%, 0 100%);
+}
+.Java > h2{
+  filter: drop-shadow(0 0 0.75rem rgb(51, 114, 126));
+}
+
+/* MEPrice section */
+.MEPrice{
+  background-image: linear-gradient(to left, rgb(44, 19, 19), rgb(153, 37, 153));
+  color: white;
+  filter: drop-shadow(1px 50px 1px #0c0c0c);
+  -webkit-clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0 100%);
+}
+.MEPrice > h2{
+  filter: drop-shadow(0 0 0 .75rem rgb(97, 6, 105));
+}
+
+/* The Geeze section */
+.TheGeeze{
+  background-image: linear-gradient(to left, rgb(223, 22, 22), rgb(1, 21, 44));
+  color: white;
+  filter: drop-shadow(1px 50px 1px #0c0c0c);
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 85%);
+  clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 85%);
+}
+.TheGeeze > h2{
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+
+
+/* Images for parallax take up whole screen */
+/* Later I hope to make this cooler */
+.lower-container > img{
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: .5;
+}
+.lower-container:nth-child(1){
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.lower-container:nth-child(2){
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/* This section is for styling the footer */
+/* This section holds the social media 'icons' */
+footer{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  /* Only use this if there isn't enough content to force it to the botom of the page */
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+}
+/* making it so the social media icons match in size */
+footer>a{
+  display: block;
+  width: 100px;
+  margin: 0 100px;
+}
+footer>a>img{
+  width: 100%;
+  height: auto;
+}
