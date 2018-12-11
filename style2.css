@@ -1,0 +1,179 @@
+/* Setting some global styling */
+body, html{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+/* Removing the scroll bar */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px; 
+}
+
+/* creating a space backgroudn */
+.space-image{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 0;
+
+  background: url("https://stmed.net/sites/default/files/galaxy-wallpapers-30826-5917013.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/* Positioning for elements */
+.upper-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* Styling the header */
+.upper-container > h1{
+  font-size: 3em;
+  color: white;
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  margin: 0;
+  padding: 2% 0;
+  padding-left: 16.5%;
+  background-color: black;
+}
+
+/* Styling the layout for all sections */
+.section-container{
+  width: 100%;
+  margin-bottom: 1%;
+  padding: 0 0 1.5% 0;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* alternating the sides the logos are on for the sections */
+.background-image{
+  width: 5%;
+  height: auto;
+
+}
+/* Styling the information portion */
+.main-section{
+  width: 90%;
+}
+.main-section > h2{
+ font-size: 2.5em;
+ margin-bottom: 10px;
+}
+.main-section > p{
+  font-size: 1.2em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.links{
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.links > a > * {
+  color: rgb(65, 191, 207);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: underline; 
+}
+
+/* Individual styling for each section */
+/* Nexus gaming series section */
+.NGS{
+  background-image: linear-gradient(to right, rgb(196, 87, 41), #482262);
+  color: white;
+  filter: drop-shadow(1px 50px 1px #0c0c0c);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+}
+.NGS > .main-section > h2{
+  filter: drop-shadow(0 0 0.75rem #1C032D);
+}
+
+/* Java game section */
+.Java{
+  background-image: linear-gradient(to left, rgb(65, 138, 151), black);
+  color: white;
+  filter: drop-shadow(1px 50px 1px #0c0c0c);
+  -webkit-clip-path: polygon(0 0, 100% 11%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 11%, 100% 90%, 0 100%);
+}
+.Java > .main-section > h2{
+  filter: drop-shadow(0 0 0.75rem rgb(51, 114, 126));
+}
+
+/* MEPrice section */
+.MEPrice{
+  background-image: linear-gradient(to left, rgb(44, 19, 19), rgb(153, 37, 153));
+  color: white;
+  filter: drop-shadow(1px 50px 1px rgb(44, 19, 19));
+  -webkit-clip-path: polygon(0 7%, 100% 5%, 100% 85%, 0 100%);
+  clip-path: polygon(0 7%, 100% 5%, 100% 85%, 0 100%);
+}
+.MEPrice > .main-section > h2{
+  filter: drop-shadow(0 0 0 .75rem rgb(97, 6, 105));
+}
+
+/* The Geeze section */
+.TheGeeze{
+  background-image: linear-gradient(to left, rgb(223, 22, 22), rgb(1, 21, 44));
+  color: white;
+  filter: drop-shadow(1px 50px 1px #0c0c0c);
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+}
+.TheGeeze > .main-section > h2{
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+
+/* This section is for styling the footer */
+/* This section holds the social media 'icons' */
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  width: 100%;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+/* making it so the social media icons match in size */
+footer>a{
+  display: block;
+  width: 3%;
+  padding: 25px;
+}
+footer > h3 {
+  font-size: 1.5em;
+  padding: 25px;
+}
+footer>a>img{
+  width: 100%;
+  height: auto;
+}
