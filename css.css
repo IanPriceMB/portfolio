@@ -178,6 +178,7 @@ html {
 footer{
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
 
@@ -192,7 +193,11 @@ footer{
 footer>a{
   display: block;
   width: 100px;
-  margin: 0 100px 20px 0;
+  margin: 0 100px 50px;
+}
+footer > h3 {
+  margin: 0 50px 50px;
+  font-size: 1.5em;
 }
 footer>a>img{
   width: 100%;
