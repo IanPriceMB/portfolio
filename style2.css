@@ -31,6 +31,8 @@ html {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+
+  background-color: rgb(155, 125, 81);
 }
 
 /* Positioning for elements */
@@ -52,13 +54,13 @@ html {
   width: 100%;
   margin: 0;
   padding: 2% 0;
-  padding-left: 16.5%;
+  padding-left: 20%;
   background-color: black;
 }
 
 /* Styling the layout for all sections */
 .section-container{
-  width: 100%;
+  width: 80%;
   margin-bottom: 1%;
   padding: 0 0 1.5% 0;
 
