@@ -14,38 +14,16 @@ html {
 }
 
 /* creating a space backgroudn */
-.space-image{
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 0;
-
-  background: url("https://stmed.net/sites/default/files/galaxy-wallpapers-30826-5917013.jpg") no-repeat center center fixed; 
+body{
+  background: url("https://wi-images.condecdn.net/image/B1NZW376pxM/crop/1620/f/space_11.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-
-  background-color: rgb(155, 125, 81);
-}
-
-/* Positioning for elements */
-.upper-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
 }
 
 /* Styling the header */
-.upper-container > h1{
+h1{
   font-size: 3em;
   color: white;
   position: relative;
@@ -54,21 +32,32 @@ html {
   width: 100%;
   margin: 0;
   padding: 2% 0;
-  padding-left: 20%;
+  padding-left: 16%;
   background-color: black;
+}
+
+/* Positioning for elements */
+.upper-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 /* Styling the layout for all sections */
 .section-container{
   width: 80%;
   margin-bottom: 1%;
-  padding: 0 0 1.5% 0;
+  padding: 1.5% 0;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.section-container:last-child{
+  margin-bottom: 0;
 }
 
 /* alternating the sides the logos are on for the sections */
@@ -81,13 +70,43 @@ html {
 .main-section{
   width: 90%;
 }
+.main-section > header{
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .main-section > h2{
  font-size: 2.5em;
+ margin: 0;
  margin-bottom: 10px;
 }
+.main-section > header > h2{
+  font-size: 2.5em;
+  margin: 0;
+ }
 .main-section > p{
   font-size: 1.2em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.main-section > video {
+  width: 100%;
+  overflow: hidden;
+}
+.screenShots{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.screenShots > * {
+  width: 45%;
+  height: 35vh;
+  margin: 10px 0;
 }
 .links{
   width: 75%;
@@ -144,10 +163,10 @@ html {
   background-image: linear-gradient(to left, rgb(223, 22, 22), rgb(1, 21, 44));
   color: white;
   filter: drop-shadow(1px 50px 1px #0c0c0c);
-  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 100%);
 }
-.TheGeeze > .main-section > h2{
+.TheGeeze > .main-section > header > h2{
   filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
 }
 
