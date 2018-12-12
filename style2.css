@@ -93,7 +93,7 @@ h1{
 }
 .screenShots{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -101,7 +101,7 @@ h1{
 .screenShots > * {
   width: 45%;
   height: 35vh;
-  margin: 10px 0;
+  margin: 10px 2.5%;
 }
 .links{
   width: 75%;
