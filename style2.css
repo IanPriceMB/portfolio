@@ -246,7 +246,7 @@ footer>a>img{
   flex-wrap: nowrap;
   width: 80%;
   margin: 0 auto;
-  background-image: linear-gradient(to right, rgb(32, 6, 43), rgb(16, 179, 11));
+  background-image: linear-gradient(to left, rgb(27, 3, 37), rgb(46, 148, 42));
 }
 .about-inner-container > p {
   padding: 20px;
