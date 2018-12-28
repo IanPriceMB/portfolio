@@ -3,6 +3,7 @@ body, html{
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
+  height: 100%;;
 }
 /* Removing the scroll bar */
 html {
@@ -23,30 +24,64 @@ body{
 }
 
 /* Styling the header */
-h1{
+.header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  height: 100px;
+}
+.header > h1{
   font-size: 3em;
   color: white;
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
+  width: 20%;
+  text-align: center;
+  padding: calc(calc(100px - 2.75em) / 2 * -1) 0;
   margin: 0;
-  padding: 2% 0;
-  padding-left: 16%;
-  background-color: black;
 }
 
 /* Positioning for elements */
-.upper-container{
+/* sidebar */
+.sidebar > a > * {
+  color: white;
+  text-decoration: underline; 
+}
+.sidebar{
+  width: 20%;
+  float: left;
+  text-align: center;
+  background-color: rgb(151, 115, 98);
+  height: calc(100% - 100px);
+  overflow: none;
+
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: nowrap;
+}
+.sidebar> a:first-child{
+  padding-top: 20px;
+}
+
+/* projects section */
+.outer-container{
+  width: 80%;
+  float: right;
+  height: calc(100% - 100px);
+  overflow: auto;
+}
+.inner-container{
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 /* Styling the layout for all sections */
 .section-container{
-  width: 80%;
+  width: 100%;
   margin-bottom: 1%;
   padding: 1.5% 0;
 
@@ -168,28 +203,63 @@ h1{
 /* This section is for styling the footer */
 /* This section holds the social media 'icons' */
 footer{
+  margin-top: auto;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
   width: 100%;
-  background-color: white;
-  position: relative;
-  z-index: 2;
 }
 /* making it so the social media icons match in size */
 footer>a{
   display: block;
-  width: 3%;
-  padding: 25px;
+  width: 20%;
+  margin: 0 10%;
 }
 footer > h3 {
-  font-size: 1.5em;
-  padding: 25px;
+  color: white;
+  font-size: 1em;
+  width: 100%;
 }
 footer>a>img{
   width: 100%;
   height: auto;
+
 }
+
+
+/* About section */
+
+.about-outer-container{
+  width: 80%;
+  float: right;
+  height: calc(100% - 100px);
+  overflow: auto;
+}
+.about-inner-container{
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 80%;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, rgb(32, 6, 43), rgb(16, 179, 11));
+}
+.about-inner-container > p {
+  padding: 20px;
+  margin: 0;
+  color: white;
+  font-size: 1.25em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.about-inner-container > h1 {
+  font-size: 2.5em;
+  color: white;
+  padding: 20px;
+  margin: 0;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
