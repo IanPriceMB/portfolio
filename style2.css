@@ -107,17 +107,24 @@ body{
 }
 .main-section > header{
   margin-top: 20px;
-
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .main-section > header > h2{
   font-size: 2.5em;
   margin: 0;
- }
+}
+.main-section > header > img {
+  width: 5%;
+  height: auto;
+}
+.main-section > header > a {
+  font-size: 2em;
+  color: white;
+}
 .main-section > p{
   font-size: 1.2em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -138,18 +145,6 @@ body{
   height: 35vh;
   margin: 10px 2.5%;
 }
-.links{
-  width: 75%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.links > a > * {
-  color: rgb(65, 191, 207);
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  text-decoration: underline; 
-}
 
 /* Individual styling for each section */
 /* Nexus gaming series section */
@@ -157,11 +152,6 @@ body{
   background-image: linear-gradient(to right, rgb(196, 87, 41), #482262);
   color: white;
   filter: drop-shadow(1px 50px 1px #0c0c0c);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
-}
-.NGS > .main-section > header > h2{
-  filter: drop-shadow(0 0 0.75rem #1C032D);
 }
 
 /* Java game section */
@@ -169,11 +159,6 @@ body{
   background-image: linear-gradient(to left, rgb(65, 138, 151), black);
   color: white;
   filter: drop-shadow(1px 50px 1px #0c0c0c);
-  -webkit-clip-path: polygon(0 0, 100% 11%, 100% 90%, 0 100%);
-  clip-path: polygon(0 0, 100% 11%, 100% 90%, 0 100%);
-}
-.Java > .main-section > header > h2{
-  filter: drop-shadow(0 0 0.75rem rgb(51, 114, 126));
 }
 
 /* MEPrice section */
@@ -181,11 +166,6 @@ body{
   background-image: linear-gradient(to left, rgb(44, 19, 19), rgb(153, 37, 153));
   color: white;
   filter: drop-shadow(1px 50px 1px rgb(44, 19, 19));
-  -webkit-clip-path: polygon(0 7%, 100% 5%, 100% 85%, 0 100%);
-  clip-path: polygon(0 7%, 100% 5%, 100% 85%, 0 100%);
-}
-.MEPrice > .main-section > header > h2{
-  filter: drop-shadow(0 0 0 .75rem rgb(97, 6, 105));
 }
 
 /* The Geeze section */
@@ -193,11 +173,6 @@ body{
   background-image: linear-gradient(to left, rgb(223, 22, 22), rgb(1, 21, 44));
   color: white;
   filter: drop-shadow(1px 50px 1px #0c0c0c);
-  -webkit-clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 100%);
-  clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 100%);
-}
-.TheGeeze > .main-section > header > h2{
-  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
 }
 
 /* This section is for styling the footer */
