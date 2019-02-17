@@ -139,6 +139,7 @@ body{
   align-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
 .screenShots > * {
   width: 45%;
@@ -151,28 +152,33 @@ body{
 .NGS{
   background-image: linear-gradient(to right, rgb(196, 87, 41), #482262);
   color: white;
-  filter: drop-shadow(1px 50px 1px #0c0c0c);
 }
 
 /* Java game section */
 .Java{
   background-image: linear-gradient(to left, rgb(65, 138, 151), black);
   color: white;
-  filter: drop-shadow(1px 50px 1px #0c0c0c);
+}
+.Java > .screenShots > * {
+  width: 100px;
+  height: auto;
+  margin: 20 auto;
+}
+.FFX{
+  background-image: linear-gradient(to right, rgb(180, 155, 121), darkgreen);
+  color: white;
 }
 
 /* MEPrice section */
 .MEPrice{
-  background-image: linear-gradient(to left, rgb(44, 19, 19), rgb(153, 37, 153));
+  background-image: linear-gradient(to left, rgb(153, 37, 153), rgb(44, 19, 19));
   color: white;
-  filter: drop-shadow(1px 50px 1px rgb(44, 19, 19));
 }
 
 /* The Geeze section */
 .TheGeeze{
-  background-image: linear-gradient(to left, rgb(223, 22, 22), rgb(1, 21, 44));
+  background-image: linear-gradient(to left, rgb(1, 21, 44), rgb(223, 22, 22));
   color: white;
-  filter: drop-shadow(1px 50px 1px #0c0c0c);
 }
 
 /* This section is for styling the footer */
